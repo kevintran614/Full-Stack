@@ -85,7 +85,63 @@
           <option value="fries">Fries</option>
         </select>
       </p>
+      <p>
+        <label for="request">Any Special Requests?</label>
+        <br />
+        <textarea
+          name="request"
+          id="request"
+          placeholder="Special Requests Here."
+          rows="10"
+          cols="100"
+        ></textarea>
+      </p>
       <button>Submit Button for Drop Down Menu</button>
+    </form>
+
+    <h2>Validations Demo</h2>
+    <form action="/dummy">
+      <label for="first">Enter First Name</label>
+      <input
+        type="text"
+        name="first"
+        id="first"
+        minlength="5"
+        maxlength="10"
+        required
+      />
+      <p>
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          minlength="5"
+          maxlength="20"
+          required
+        />
+      </p>
+      <p>
+        <label for="">Enter your email</label>
+        <input
+          type="email"
+          required
+          name="email"
+          id="email"
+          placeholder="enter email here"
+        />
+      </p>
+      <p>
+        <label for="">Enter your URL</label>
+        <input
+          type="url"
+          required
+          name="url"
+          id="url"
+          placeholder="enter url here"
+        />
+      </p>
+      <button>Submit your demo</button>
     </form>
   </body>
 </html>
