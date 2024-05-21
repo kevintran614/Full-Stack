@@ -1,0 +1,21 @@
+h1 {
+  color: aqua;
+  background-color: beige;
+  text-align: center;
+  font-weight: normal;
+  text-decoration: rgb(50, 50, 250) underline;
+  font-size: 100px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+  color: magenta;
+  background-color: lightsalmon;
+}
+
+p {
+  color: rgb(255, 50, 50);
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 15px;
+}
