@@ -45,22 +45,38 @@ for (let i = 0; i < animals.length; i++) {
   console.log(animals[i]);
 }
 
-let userResponse = parseInt(prompt("Enter the maximum number!"));
+// let userResponse = parseInt(prompt("Enter the maximum number!"));
 
-while (!userResponse) {
-  userResponse = parseInt(prompt("Enter the maximum number!"));
+// while (!userResponse) {
+//   userResponse = parseInt(prompt("Enter the maximum number!"));
+// }
+
+// const target = Math.floor(Math.random() * userResponse) + 1;
+// console.log(target);
+
+// const userGuess = parseInt(prompt("Enter your guess!"));
+
+// while (userGuess != target) {
+//   userGuess = parseInt(prompt("Enter your guess!"));
+// }
+
+// console.log("You got it!");
+
+// ------- for "of" loops -------
+const foods = ["poke", "sushi", "cold noodles"];
+
+for (let food of foods) {
+  console.log(food);
 }
 
-const target = Math.floor(Math.random() * userResponse) + 1;
-console.log(target);
+// ------- for "in" loops -------
+const testScores = {
+  Kevin: 100,
+  Kelly: 100,
+  Brian: 100,
+};
 
-const userGuess = parseInt(prompt("Enter your guess!"));
-
-while (userGuess != target) {
-  userGuess = parseInt(prompt("Enter your guess!"));
+for (let person in testScores) {
+  console.log(person);
+  console.log(testScores[person]);
 }
-
-console.log("You got it!");
-
-// ------- for of loops -------
-// adding test message
