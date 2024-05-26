@@ -63,3 +63,4 @@ while (userGuess != target) {
 console.log("You got it!");
 
 // ------- for of loops -------
+// adding test message
