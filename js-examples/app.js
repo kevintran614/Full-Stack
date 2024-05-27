@@ -13,6 +13,10 @@ if (random < 0.5) {
 const password = prompt("enter a password");
 console.log(password);
 
+// ------- string formatting -------
+let myName = "Bob";
+console.log(` Hi, ${myName}!`);
+
 // ------- arrays -------
 const myArr = [1, 2, 3]; // making an array makes an REFERENCE to the array
 myArr.push(4);
@@ -45,23 +49,6 @@ for (let i = 0; i < animals.length; i++) {
   console.log(animals[i]);
 }
 
-// let userResponse = parseInt(prompt("Enter the maximum number!"));
-
-// while (!userResponse) {
-//   userResponse = parseInt(prompt("Enter the maximum number!"));
-// }
-
-// const target = Math.floor(Math.random() * userResponse) + 1;
-// console.log(target);
-
-// const userGuess = parseInt(prompt("Enter your guess!"));
-
-// while (userGuess != target) {
-//   userGuess = parseInt(prompt("Enter your guess!"));
-// }
-
-// console.log("You got it!");
-
 // ------- for "of" loops -------
 const foods = ["poke", "sushi", "cold noodles"];
 
@@ -80,3 +67,10 @@ for (let person in testScores) {
   console.log(person);
   console.log(testScores[person]);
 }
+
+// ------- functions -------
+function greet(person) {
+  console.log(` Hi, ${person}!`);
+}
+
+greet("Kevin");
