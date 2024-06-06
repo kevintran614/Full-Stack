@@ -173,3 +173,102 @@ const cat = {
     console.log(this.name);
   },
 };
+
+// THE FOLLOWING FUNCTIONS WILL ACCEPT FUNCTION CALLBACKS AS AN ARGUMENT : forEach, map, filter, reduce
+// ------- for each (1) -------
+const numbers = [1, 2, 3, 4, 5];
+
+/* for each will console.log each el in numbers */
+/* forEach accepts a function callback as its parameter */
+/* forEach will call this function for each element in the arr */
+numbers.forEach(function (el) {
+  console.log(el);
+});
+
+/* similar to doing a for of loop */
+for (let el of numbers) {
+  console.log(el);
+}
+
+// ------- map (2) -------
+const numArr = [1, 2, 3, 4, 5];
+
+/* map accepts a function callback */
+/* will return a NEW arr */
+
+const doublesArr = numArr.map(function (num) {
+  return num * 2;
+});
+
+// ------- arrow functions -------
+/* allows you to create a function without using the "function" keyword */
+const addVer1 = function (x, y) {
+  return x * y;
+};
+
+const addVer2 = (x, y) => {
+  return x * y;
+};
+
+const greet2 = (name) => {
+  return `Hey ${name}!`;
+};
+
+// ------- arrow functions implicit returns -------
+/* only works if function body is ONE line */
+/* does not require return keyword */
+const rollDie1 = () => {
+  return 1 + 1;
+};
+
+const rollDie2 = () => 1 + 1;
+rollDie2();
+
+const movies = [
+  {
+    title: "Alien",
+    score: 90,
+  },
+  {
+    title: "Billy Bob",
+    score: 85,
+  },
+];
+
+const newMovies1 = movies.map(function (movie) {
+  return `${movie.title} - ${movie.score / 10}`;
+});
+
+const newMovies2 = movies.map(
+  (movie) => `${movie.title} - ${movie.score / 10}`
+);
+
+// ------- function summary -------
+const isEven1 = function (num) {
+  return num % 2 === 0;
+};
+
+const isEven2 = (num) => {
+  return num % 2 === 0;
+};
+
+const isEven3 = (num) => num % 2 === 0;
+
+// ------- filter (3) -------
+const myNums = [1, 2, 3, 4, 5, 6, 7, 8];
+
+/* filter creates a NEW array, calls a function callback as an argument */
+const newMyNums = myNums.filter((n) => n > 4);
+
+// ------- reduce (4) -------
+/* reduces all elements of an array to a SINGLE value */
+/* reduce accepts 2 arguments: 
+       1) an accumulator/total 
+       2) the current element in the arr
+*/
+
+const prices = [1, 2, 3, 4, 5];
+
+const total = prices.reduce((total, price) => total + price);
+
+// ------- this keyword -------
