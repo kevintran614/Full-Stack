@@ -318,3 +318,48 @@ function sum2(...nums) {
 }
 
 sum2(5, 10, 15); // 5, 10, 15 would be stored in an array called nums
+
+// ------- destructuring -------
+/* extracts an element from an arr without modifying the original arr */
+
+/* Example 1 */
+const scores = [1, 2, 3, 4, 5];
+
+const firstScore1 = scores[0];
+const secondScore1 = scores[1];
+
+const [firstScore2, secondScore2, ...restOfScores] = scores;
+/*
+      firstScore2 = 1
+      secondScore2 = 2
+      restOfScores = [3, 4, 5]
+*/
+
+/* Example 2 */
+const user = {
+  email: "email.com",
+  firstName: "Kevin",
+  lastName: "Tran",
+  isFun: true,
+};
+
+/* extracting properties using SAME name */
+const { email, firstName, lastName } = user;
+
+/*
+      we can extract properties using DIFF names;
+      we extract the isFun property from the object 
+      into a variable called booleanIsFun
+*/
+const { isFun: booleanIsFun } = user;
+
+/* Example 3 */
+function fullName({ firstName, lastName }) {
+  return `${firstName} ${lastName}`;
+}
+
+/* 
+      allows you to access obj properties 
+      without having to do user.firstName, user.lastName
+*/
+fullName(user);
