@@ -271,4 +271,50 @@ const prices = [1, 2, 3, 4, 5];
 
 const total = prices.reduce((total, price) => total + price);
 
-// ------- this keyword -------
+// ------- default parameters -------
+function sayHello1(name = "Kevin Tran") {
+  console.log(name);
+}
+
+sayHello1();
+
+const sayHello2 = (name) => console.log(name);
+
+// ------- spread -------
+/* you can use spread to create a COPY of an iterable */
+
+/* Example 1 */
+spreadNums = [1, 2, 3, 4, , 5];
+
+Math.max(1, 2, 3, 4, 5);
+
+/* this is the same as above */
+Math.max(...spreadNums);
+
+/* Example 2 */
+const cats = ["Blue", "Scout", "Rocket"];
+const dogs = ["Rusty", "Wyatt"];
+
+/* this saves us the trouble of manually typing out each name */
+const allPets = [...cats, ...dogs]; // "Blue", "Scout", "Rocket", "Rusty", "Wyatt"
+
+/* Example 3 */
+const feline = { legs: 4, family: "Felidae" };
+const canine = { isFurry: true, family: "Caninae" };
+const catDog = { ...feline, ...canine };
+
+/* you can also add new properties to the object */
+const newCatDog = { ...feline, ...canine, id: "Kevin", isAwesome: true };
+
+// ------- rest parameters -------
+function sum1(nums) {
+  return nums; // 3
+}
+
+sum1(3, 5, 7); // the sum function would only accept 3 and ignore 5/6
+
+function sum2(...nums) {
+  return nums; // [5, 10, 15]
+}
+
+sum2(5, 10, 15); // 5, 10, 15 would be stored in an array called nums
