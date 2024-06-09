@@ -36,3 +36,52 @@ for (let img of squareImages) {
   img.src =
     "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Silky_bantam.jpg/440px-Silky_bantam.jpg";
 }
+
+// ------- 4) querySelector-------
+/* will return the FIRST instance of an element/id/class/tag */
+
+// ------- 5) querySelectorAll -------
+/* returns an object of ALL instances of an element/id/class/tag */
+const links = document.querySelectorAll("p a");
+
+for (let link of links) {
+  console.log(link.href);
+}
+
+/* how to select a html element with a specific attribute */
+const checkbox = document.querySelector('input[type="checkbox"]');
+
+/* how to select html elements with a specific css class name */
+const doneTodos = document.querySelectorAll(".done");
+
+// ------- 1) innerText -------
+/* 
+      1) returns the actual value nested between an html element 
+      2) tldr; returns only the text of an elements
+*/
+
+const p = document.querySelector("p").innerText;
+console.log(p);
+
+/*
+      The Silkie (sometimes spelled Silky) is a breed of chicken named for \
+      its atypically fluffy plumage, which is said to feel like silk and satin. 
+*/
+
+// ------- 2) innerHTML -------
+/* 
+      1) returns the actual value nested between an html element, similar to innerText,
+      BUT also includes all of the nested html elements/tags as well
+      2) can also be used to ADD additional html elements/tags
+      3) tldr; returns THE ENTIRE HTML CODE
+*/
+
+const innerHtml = document.querySelector("p").innerHTML;
+console.log(innerHtml);
+
+/*
+      'The <b>Silkie</b> (sometimes spelled <b>Silky</b>) is a <a href="/wiki/List_of_chicken_breeds" 
+      title="List of chicken breeds">breed</a> of <a href="/wiki/Chicken" title="Chicken">chicken</a> named for\n        
+*/
+
+document.querySelector("h1").innerHTML = "<i>asdada<i>";
