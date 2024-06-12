@@ -85,3 +85,29 @@ console.log(innerHtml);
 */
 
 document.querySelector("h1").innerHTML = "<i>asdada<i>";
+
+// ------- Attributes -------
+const firstLink = document.querySelector("a");
+/* we can use getAttribute to access the attribute of an element if it exists */
+console.log(firstLink.getAttribute("href"));
+
+/* we can use setAttribute to modify the value of an attribute of an element */
+firstLink.setAttribute("href", "http://www.google.com");
+
+// ------- Changing Styles -------
+const h1 = document.querySelector("h1");
+
+/* you can use "style" to edit the css of an element; this creates inline css styles within the html code */
+h1.style.color = "blue";
+h1.style.fontSize = "3em";
+
+// ------- Class List -------
+const h2 = document.querySelector("h2");
+
+/* you can you classList to add/remove defined css classes */
+h2.classList.add("purple");
+h2.classList.add("border");
+h2.classList.remove("purple");
+
+/* you can also toggle css styles */
+h2.classList.toggle("purple");
