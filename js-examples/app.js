@@ -280,7 +280,7 @@ sayHello1();
 
 const sayHello2 = (name) => console.log(name);
 
-// ------- spread -------
+// ------- spread = arguments -------
 /* you can use spread to create a COPY of an iterable */
 
 /* Example 1 */
@@ -306,7 +306,7 @@ const catDog = { ...feline, ...canine };
 /* you can also add new properties to the object */
 const newCatDog = { ...feline, ...canine, id: "Kevin", isAwesome: true };
 
-// ------- rest parameters -------
+// ------- rest parameters = parameters -------
 function sum1(nums) {
   return nums; // 3
 }
