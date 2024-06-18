@@ -117,7 +117,7 @@ const firstBold = document.querySelector("b");
 console.log(firstBold.parentElement);
 
 // ------- Append and Append Child -------
-/* 1) Append */
+/* 1) Append Child */
 const newImg = document.createElement("img"); // creates an img element
 
 newImg.src = // update new element with values
@@ -127,7 +127,7 @@ document.body.appendChild(newImg); // append new element
 
 newImg.classList.add("square"); // apply css to the new element
 
-/* 2) Append Child */
+/* 2) Append */
 const paragrpah = document.querySelector("p");
 paragrpah.append(
   "Hi future me, this is a message from past me. I hope your summer has been treating you well! :)"
