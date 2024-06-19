@@ -1,28 +1,15 @@
-const tweetForm = document.querySelector("#tweetForm");
-const tweetsContainer = document.querySelector("#tweets");
-tweetForm.addEventListener("submit", function (e) {
-  /* 
-        1) preventDefault can be used to prevent the form action attribute from
-           re-directing to it's endpoint
-        2) prevents the default behavior of an event from triggering 
-        3) is NOT just limited to html form elements 
-    */
-  e.preventDefault();
+const form = document.querySelector("#shelterForm");
+const input = document.querySelector("#catName");
+const list = document.querySelector("#cats");
 
-  // const usernameInput = document.querySelectorAll('input')[0];
-  // const tweetInput = document.querySelectorAll('input')[1];
-  const usernameInput = tweetForm.elements.username;
-  const tweetInput = tweetForm.elements.tweet;
-  addTweet(usernameInput.value, tweetInput.value);
-  usernameInput.value = "";
-  tweetInput.value = "";
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); // stop the default behavior of the event
+
+  const catName = input.value; // take user input
+  const newLI = document.createElement("LI"); // create a new list element
+
+  newLI.innerText = catName; // set the value of the new list element
+  list.appendChild(newLI); // add the new list element to our html ul element
+
+  input.value = ""; // will set the input to be an empty string after submitting
 });
-
-const addTweet = (username, tweet) => {
-  const newTweet = document.createElement("li");
-  const bTag = document.createElement("b");
-  bTag.append(username);
-  newTweet.append(bTag);
-  newTweet.append(`- ${tweet}`);
-  tweetsContainer.append(newTweet);
-};
