@@ -7,15 +7,12 @@ import dotenv from "dotenv";
 import authRoutes from "./routes/auth.routes.js";
 import connectToMongoDB from "./db/connectToMongoDB.js";
 
-const app = express();
-
 dotenv.config();
+
+const app = express();
 const PORT = process.env.PORT || 5001;
 
-app.get("/", (req, res) => {
-  // root route http://localhost:5001/
-  res.send("hello word!!! updated change again change change more");
-});
+app.use(express.json()); // to parse incoming requests (from req.body from auth.controller.js)
 
 app.use("/api/auth", authRoutes);
 
